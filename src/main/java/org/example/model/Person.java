@@ -2,19 +2,19 @@ package org.example.model;
 
 import java.util.Objects;
 
-public class People {
+public class Person {
     int personId;
     String firstName;
     String lastName;
 
-    public People(int personId, String firstName, String lastName) {
+    public Person(int personId, String firstName, String lastName) {
         this.personId = personId;
         this.firstName = firstName;
         this.lastName = lastName;
     }
 
-    public People(String firstName, String lastName) {
-        this(0,"Amer","Rasheed");
+    public Person(String firstName, String lastName) {
+        this(1,firstName,lastName);
         }
 
     public int getPersonId() {
@@ -41,7 +41,7 @@ public class People {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        People people = (People) o;
+        Person people = (Person) o;
         return personId == people.personId &&
                 Objects.equals(firstName, people.firstName) &&
                 Objects.equals(lastName, people.lastName);
@@ -54,7 +54,7 @@ public class People {
 
     @Override
     public String toString() {
-        return "People{" +
+        return "Person{" +
                 "personId=" + personId +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
